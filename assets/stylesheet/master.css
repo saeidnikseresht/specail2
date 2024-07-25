@@ -1,0 +1,243 @@
+  .nth {
+     
+    background-color: bisque;
+      flex-wrap: wrap;
+      text-align: center;
+      font-size: 40px;
+      margin-top: 50px;
+      color: blue;
+      border: 2px solid burlywood;
+      
+
+  }
+  
+
+  .row11 {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      margin: 200px auto;
+      
+  }
+
+  .stick {
+      width: 6px;
+      height: 200px;
+      position: absolute;
+      background-color: rgba(181, 181, 25, 0.619);
+      top: 40px;
+      left: 47px;
+  }
+
+  .stick::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 10px;
+      top: 195px;
+      left: -22px;
+      border-radius: 50%;
+      z-index: -1;
+      background-color: black;
+
+  }
+
+  .ani {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      animation: rotate 2s linear infinite;
+
+  }
+
+  .ani::after {
+      content: "";
+      top: 45px;
+      left: 45px;
+      width: 10px;
+      height: 10px;
+      background-color: rgb(12, 4, 1);
+      border: radius 30%;
+      position: absolute;
+
+  }
+
+  .ani1,
+  .ani2,
+  .ani3,
+  .ani4 {
+      width: 90px;
+      height: 40px;
+      position: absolute;
+      margin: 13px 0 0 -41px;
+      background-color: aqua;
+      border-bottom-left-radius: 40% 100%;
+  }
+
+  .ani1::after,
+  .ani2::after,
+  .ani3::after,
+  .ani4::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      width: 65px;
+      height: 40px;
+  }
+
+  .ani1 {
+      transform: rotate(45deg);
+      background-color: rgb(12, 106, 165);
+  }
+
+  .ani::after {
+      background-image: radial-gradient(circle at 0 0, rgba(26, 12, 20, 0.489) 40px, green 41px);
+  }
+
+  .ani2 {
+      left: 63px;
+      top: -28px;
+      transform: rotate(135deg);
+      background-color: tomato;
+  }
+
+  .ani2::after {
+      background-image: radial-gradient(circle at 0 0, rgba(13, 7, 182, 0.489) 40px, rgb(0, 2, 141) 41px);
+
+
+  }
+
+  .ani3 {
+      left: 92px;
+      top: 35px;
+      transform: rotate(22deg);
+      background-color: darkmagenta;
+  }
+
+  .ani3::after {
+      background-image: radial-gradient(circle at 0 0, rgba(25, 137, 198, 0.489) 40px, rgb(24, 101, 101) 41px);
+  }
+
+  .ani4 {
+      left: 29px;
+      top: 63px;
+      transform: rotate(315deg);
+      background-color: darkorange;
+  }
+
+  .ani4::after {
+      background-image: radial-gradient(circle at 0 0, rgba(0, 0, 0, 0.489) 40px, green 41px);
+  }
+
+  @keyframes rotate {
+      0% {
+          transform: rotate(0);
+      }
+
+      100% {
+          transform: rotate(-360deg);
+      }
+  }
+
+
+
+
+
+
+  .ghab {
+      width: 200px;
+      height: 200px;
+      /* border: 1px solid red; */
+      right: 20px;
+      bottom: 40%;
+      position: fixed;
+
+      >div {
+          height: 100%;
+          width: 100%;
+          /* background-color: #a17b36; */
+          position: absolute;
+          left: 0;
+          bottom: 0;
+
+
+
+
+          &:first-of-type {
+              background-color: rgb(255, 0, 38);
+              border-radius: 15% 85% 23% 77% / 54% 49% 51% 46%;
+              animation: anime2 infinite alternate 2s;
+
+
+          }
+
+          &:last-of-type {
+              background-image: url(../image/Screenshot_۲۰۲۳۰۹۲۱_۰۰۴۵۴۲_Instagram.jpg);
+              background-size: cover;
+              border-radius: 78% 22% 73% 27% / 61% 53% 47% 39%;
+              animation: anime1 infinite alternate 1s;
+
+          }
+
+
+      }
+
+      &:hover {
+          >a {
+              left: -300px;
+          }
+
+          >span {
+              right: 1000px;
+          }
+
+
+
+
+      }
+
+      >a {
+          position: absolute;
+          left: 3000px;
+          font-size: 40px;
+          text-decoration: none;
+          transition: 0.7s;
+          background-color: yellow;
+
+          &:first-of-type {
+              top: 50px;
+          }
+
+
+      }
+
+      >span {
+          background-color: yellow;
+          font-size: 50px;
+          right: -3000px;
+          position: absolute;
+          transition: 1s;
+          font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        
+        
+
+
+      }
+  }
+
+
+
+
+
+
+  @keyframes anime1 {
+      to {
+          border-radius: 15% 85% 23% 77% / 54% 49% 51% 46%;
+      }
+  }
+
+  @keyframes anime2 {
+      to {
+          border-radius: 78% 22% 73% 27% / 61% 53% 47% 39%;
+      }
+  }
